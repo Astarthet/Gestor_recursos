@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reporte</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Reporte de Gestión</h1>
+        <div class="card mt-3">
+            <div class="card-body">
+                <p><strong>Total de Empleados:</strong> {{ reporte['Total de Empleados'] }}</p>
+                <p><strong>Promedio de Eficiencia:</strong> {{ reporte['Promedio de Eficiencia'] }}</p>
+                <p><strong>Total de Recursos:</strong> {{ reporte['Total de Recursos'] }}</p>
+                <p><strong>Tareas Pendientes:</strong> {{ reporte['Tareas Pendientes'] }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

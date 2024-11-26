@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recursos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/empleados">Ver Empleados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recursos">Ver Recursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tareas">Ver Tareas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Lista de Recursos</h1>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Recurso</th>
+                    <th>Estado</th>
+                    <th>Costo de Mantenimiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for recurso in recursos %}
+                <tr>
+                    <td>{{ recurso['id'] }}</td>
+                    <td>{{ recurso['recurso'] }}</td>
+                    <td>{{ recurso['estado'] }}</td>
+                    <td>{{ recurso['costo_mantenimiento'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+

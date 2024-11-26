@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Recursos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .form-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/empleados">Ver Empleados</a></li>
+                <li class="nav-item"><a class="nav-link" href="/recursos">Ver Recursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/tareas">Ver Tareas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <div class="header">
+        <h1 class="display-4">Sistema de Gestión de Recursos</h1>
+        <p class="lead">Optimiza la gestión de empleados, recursos e infraestructuras de manera eficiente.</p>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container main-container">
+        <div class="row">
+            <!-- Formulario para agregar empleados -->
+            <div class="col-md-4">
+                <div class="form-section">
+                    <h4>Agregar Empleado</h4>
+                    <form action="/agregar_empleado" method="post">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="puesto">Puesto</label>
+                            <input type="text" class="form-control" id="puesto" name="puesto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="horas_trabajadas">Horas Trabajadas</label>
+                            <input type="number" class="form-control" id="horas_trabajadas" name="horas_trabajadas" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eficiencia">Eficiencia</label>
+                            <input type="number" step="0.01" class="form-control" id="eficiencia" name="eficiencia" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Agregar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Formulario para agregar recursos -->
+            <div class="col-md-4">
+                <div class="form-section">
+                    <h4>Agregar Recurso</h4>
+                    <form action="/agregar_recurso" method="post">
+                        <div class="form-group">
+                            <label for="recurso">Recurso</label>
+                            <input type="text" class="form-control" id="recurso" name="recurso" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input type="text" class="form-control" id="estado" name="estado" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="costo_mantenimiento">Costo de Mantenimiento</label>
+                            <input type="number" step="0.01" class="form-control" id="costo_mantenimiento" name="costo_mantenimiento" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Agregar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Formulario para agregar tareas -->
+            <div class="col-md-4">
+                <div class="form-section">
+                    <h4>Agregar Tarea</h4>
+                    <form action="/agregar_tarea" method="post">
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <input type="text" class="form-control" id="descripcion" name="descripcion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="asignado_a">Asignado a</label>
+                            <input type="text" class="form-control" id="asignado_a" name="asignado_a" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input type="text" class="form-control" id="estado" name="estado" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha_limite">Fecha Límite</label>
+                            <input type="date" class="form-control" id="fecha_limite" name="fecha_limite" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Agregar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Fase_4_Kevin_Hernandez</p>
+    </div>
+</body>
+</html>
+
+
+
